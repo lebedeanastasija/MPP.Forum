@@ -2,11 +2,13 @@ package simple.blog.app.persistence;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
+import org.springframework.context.annotation.Bean;
 
 public class HibernateUtil {
 
     private static final SessionFactory sessionFactory = buildSessionFactory();
 
+    @Bean
     private static SessionFactory buildSessionFactory() {
         try {
             // Create the SessionFactory from hibernate.cfg.xml

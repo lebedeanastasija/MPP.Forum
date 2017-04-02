@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="simple.blog.app.entity.DiscountEntity" table="discount" schema="hostel">
+        <id name="idDiscount">
+            <column name="id_discount" sql-type="int(10) unsigned"/>
+        </id>
+        <property name="minSum">
+            <column name="min_sum" sql-type="int(10) unsigned" not-null="true"/>
+        </property>
+        <property name="maxSum">
+            <column name="max_sum" sql-type="int(10) unsigned" not-null="true"/>
+        </property>
+        <property name="discountValue">
+            <column name="discount_value" sql-type="int(10) unsigned" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

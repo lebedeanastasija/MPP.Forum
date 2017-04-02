@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="simple.blog.app.entity.Card" table="card" schema="hostel">
+        <id name="idCard">
+            <column name="id_card" sql-type="int(10) unsigned"/>
+        </id>
+        <property name="idClient">
+            <column name="id_client" sql-type="int(10) unsigned"/>
+        </property>
+        <property name="totalSum">
+            <column name="total_sum" sql-type="int(11)"/>
+        </property>
+        <property name="idDiscount">
+            <column name="id_discount" sql-type="int(10) unsigned"/>
+        </property>
+    </class>
+</hibernate-mapping>

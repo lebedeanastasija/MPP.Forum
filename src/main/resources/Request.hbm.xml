@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="simple.blog.app.entity.Request" table="request" schema="hostel">
+        <id name="idRequest">
+            <column name="id_request" sql-type="int(10) unsigned"/>
+        </id>
+        <property name="idClient">
+            <column name="id_client" sql-type="int(10) unsigned"/>
+        </property>
+        <property name="idAdministrator">
+            <column name="id_administrator" sql-type="int(10) unsigned" not-null="true"/>
+        </property>
+        <property name="seatsNumber">
+            <column name="seats_number" sql-type="tinyint(3) unsigned"/>
+        </property>
+        <property name="checkinDate">
+            <column name="checkin_date" sql-type="date"/>
+        </property>
+        <property name="daysStay">
+            <column name="days_stay" sql-type="tinyint(3) unsigned"/>
+        </property>
+        <property name="requestType">
+            <column name="request_type" sql-type="tinyint(1)"/>
+        </property>
+        <property name="payment">
+            <column name="payment" sql-type="int(10) unsigned" not-null="true"/>
+        </property>
+        <property name="requestStatus">
+            <column name="request_status" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

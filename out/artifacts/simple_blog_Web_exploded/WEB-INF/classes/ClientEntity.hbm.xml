@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="simple.blog.app.entity.ClientEntity" table="client" schema="hostel">
+        <id name="idClient">
+            <column name="id_client" sql-type="int(10) unsigned"/>
+        </id>
+        <property name="login">
+            <column name="login" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="banned">
+            <column name="banned" sql-type="tinyint(1)"/>
+        </property>
+    </class>
+</hibernate-mapping>

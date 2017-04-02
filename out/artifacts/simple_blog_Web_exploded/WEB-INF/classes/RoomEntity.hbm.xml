@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="simple.blog.app.entity.RoomEntity" table="room" schema="hostel">
+        <id name="idRoom">
+            <column name="id_room" sql-type="int(10) unsigned"/>
+        </id>
+        <property name="seatsNumber">
+            <column name="seats_number" sql-type="tinyint(3) unsigned"/>
+        </property>
+        <property name="perdayCost">
+            <column name="perday_cost" sql-type="int(10) unsigned"/>
+        </property>
+    </class>
+</hibernate-mapping>

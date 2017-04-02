@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="simple.blog.app.entity.SсheduleRecordEntity" table="sсhedule_record" schema="hostel">
+        <id name="idRecord">
+            <column name="id_record" sql-type="int(10) unsigned"/>
+        </id>
+        <property name="checkinDate">
+            <column name="checkin_date" sql-type="date"/>
+        </property>
+        <property name="checkoutDate">
+            <column name="checkout_date" sql-type="date"/>
+        </property>
+    </class>
+</hibernate-mapping>
